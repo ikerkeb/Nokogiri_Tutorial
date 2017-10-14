@@ -13,7 +13,7 @@ parse_page = Nokogiri::HTML(page)
 pets_array = []
 
 # this is where we parse the data
-parse_page.css('.content').css('.row').css('.hdrlnk').map do |a|
+parse_page.css('.content').css('.rows').css('.hdrlnk').map do |a|
 	post_name = a.text
 	pets_array.push(post_name)
 end
